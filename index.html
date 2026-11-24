@@ -91,7 +91,7 @@ button:active{transform:scale(.98)}
   <div class="wave" id="wave" aria-hidden="true"></div>
 
   <section class="panel">
-    <div class="panel-title"><span>› LOGS DO SISTEMA</span><span class="dim">•••</span></div>
+    <div class="panel-title"><span>› SLOTS E HORÁRIOS:</span><span class="dim">•••</span></div>
     <div class="logs" id="logs">
       <div class="logline"><em>[20:47:21]</em> Analisando casa “666OLA.com”...</div>
       <div class="logline"><em>[20:47:22]</em> Verificando volatilidade...</div>
@@ -129,13 +129,13 @@ const lines=[
 'Preparando ambiente seguro para um bom rtp...',
 'Carregando horários mais precisos... [OK]',
 'Verificando integridade da interface...',
-'Analisando falhas no sistema 666OLA.com...',
+'Analisando maiores chances de JACKPOT 666OLA.com...',
 'Canal de falhas estabelecido.',
-'Organizando sequência de dados...',
-'Executando rotina de horários...',
-'Validando integridade dos arquivos...',
-'Transferência de dados em andamento...',
-'Horários concluído com sucesso.'
+'FORTUNE RABBIT com 94% de chances de ganhos.',
+'18:33 - 20 giros banca minima modo turbo',
+'18:38 - 10 giros banca de R$ 1,50.',
+'18:51 - 13 giros no turbo banca minima +',
+'10 giros de R$ 1,00 sem o turbo.'
 ];
 let index=0,progress=0,timer=null,seconds=0;
 function stamp(){return new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit',second:'2-digit'})}
@@ -155,10 +155,10 @@ function tick(){
  fill.style.width=progress+'%';percent.textContent=progress+'%';
  document.getElementById('speed').textContent=(3.6+Math.random()*2.8).toFixed(1);
  document.getElementById('eta').textContent='00:'+String(Math.max(0,Math.ceil((100-progress)/7))).padStart(2,'0');
- if(progress<35){decryptTitle.textContent='ANALISANDO PACOTES...';decryptText.textContent='Preparando sequência de horários e slots.'}
+ if(progress<35){decryptTitle.textContent='ANALISANDO SLOTS...';decryptText.textContent='Preparando sequência de horários e slots.'}
  else if(progress<75){decryptTitle.textContent='DESCRIPTOGRAFIA EM ANDAMENTO...';decryptText.textContent='Processando dados dos slots.'}
  else if(progress<100){decryptTitle.textContent='VALIDANDO RESULTADOS...';decryptText.textContent='Conferindo integridade da volatilidade.'}
- else{decryptTitle.textContent='HORÁRIOS DISPONIVEIS';decryptText.textContent='Todos os dados foram executados.';addLine('>>> OPERAÇÃO CONCLUÍDA.',true);addLog('Simulação finalizada. Nenhum sistema foi acessado.');stop()}
+ else{decryptTitle.textContent='VERIFICANDO TODOS OS SLOTS';decryptText.textContent='Todos os dados foram executados.';addLine('>>> OPERAÇÃO CONCLUÍDA.',true);addLog('Simulação finalizada. Nenhum sistema foi acessado.');stop()}
 }
 function stop(){if(timer){clearInterval(timer);timer=null}}
 function start(){if(timer)return;if(progress>=100)reset();timer=setInterval(tick,1050);tick()}
