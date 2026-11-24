@@ -63,7 +63,7 @@ button:active{transform:scale(.98)}
   <div class="status"><span id="clock">20:47</span><small>●●●  ◈  87%</small></div>
   <header class="header">
     <div class="logo">⌘</div>
-    <div class="brand"><strong>ACCESS TERMINAL v3.7.2</strong><span>FALHAS • RODAGEM</span></div>
+    <div class="brand"><strong>ACCESS TERMINAL v3.7.2</strong><span>HORÁRIOS • SLOTS</span></div>
     <div class="online"><i></i>ONLINE</div>
   </header>
   <div class="stripe"></div>
@@ -93,9 +93,9 @@ button:active{transform:scale(.98)}
   <section class="panel">
     <div class="panel-title"><span>› LOGS DO SISTEMA</span><span class="dim">•••</span></div>
     <div class="logs" id="logs">
-      <div class="logline"><em>[20:47:21]</em> Analisando site “5KKK.com”...</div>
-      <div class="logline"><em>[20:47:22]</em> Módulos visuais carregados.</div>
-      <div class="logline"><em>[20:47:23]</em> Aguardando sequência...</div>
+      <div class="logline"><em>[20:47:21]</em> Analisando casa “666OLA.com”...</div>
+      <div class="logline"><em>[20:47:22]</em> Verificando volatilidade...</div>
+      <div class="logline"><em>[20:47:23]</em> Aguardando sequência de horários...</div>
     </div>
   </section>
 
@@ -104,7 +104,7 @@ button:active{transform:scale(.98)}
     <button id="pause">Ⅱ PAUSAR</button>
     <button id="reset">↻ REINICIAR</button>
   </div>
-  <div class="disclaimer">FALHAS DE SITE</div>
+  <div class="disclaimer">PRECISÃO NO HORÁRIO</div>
 </main>
 
 <nav class="nav">
@@ -126,16 +126,16 @@ const decryptTitle=document.getElementById('decryptTitle');
 const decryptText=document.getElementById('decryptText');
 const clock=document.getElementById('clock');
 const lines=[
-'Preparando ambiente seguro de demonstração...',
-'Carregando módulos visuais [OK]',
+'Preparando ambiente seguro para um bom rtp...',
+'Carregando horários mais precisos... [OK]',
 'Verificando integridade da interface...',
-'Analisando falhas no sistema 5KKK.com...',
+'Analisando falhas no sistema 666OLA.com...',
 'Canal de falhas estabelecido.',
 'Organizando sequência de dados...',
-'Executando rotina de erros e horários na rodagem...',
+'Executando rotina de horários...',
 'Validando integridade dos arquivos...',
 'Transferência de dados em andamento...',
-'Processo visual concluído com sucesso.'
+'Horários concluído com sucesso.'
 ];
 let index=0,progress=0,timer=null,seconds=0;
 function stamp(){return new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit',second:'2-digit'})}
@@ -155,10 +155,10 @@ function tick(){
  fill.style.width=progress+'%';percent.textContent=progress+'%';
  document.getElementById('speed').textContent=(3.6+Math.random()*2.8).toFixed(1);
  document.getElementById('eta').textContent='00:'+String(Math.max(0,Math.ceil((100-progress)/7))).padStart(2,'0');
- if(progress<35){decryptTitle.textContent='ANALISANDO PACOTES...';decryptText.textContent='Preparando sequência de dados fictícios.'}
- else if(progress<75){decryptTitle.textContent='DESCRIPTOGRAFIA EM ANDAMENTO...';decryptText.textContent='Processando dados de demonstração.'}
- else if(progress<100){decryptTitle.textContent='VALIDANDO RESULTADOS...';decryptText.textContent='Conferindo integridade da simulação.'}
- else{decryptTitle.textContent='SIMULAÇÃO CONCLUÍDA';decryptText.textContent='Todos os efeitos visuais foram executados.';addLine('>>> OPERAÇÃO DE DEMONSTRAÇÃO CONCLUÍDA.',true);addLog('Simulação finalizada. Nenhum sistema foi acessado.');stop()}
+ if(progress<35){decryptTitle.textContent='ANALISANDO PACOTES...';decryptText.textContent='Preparando sequência de horários e slots.'}
+ else if(progress<75){decryptTitle.textContent='DESCRIPTOGRAFIA EM ANDAMENTO...';decryptText.textContent='Processando dados dos slots.'}
+ else if(progress<100){decryptTitle.textContent='VALIDANDO RESULTADOS...';decryptText.textContent='Conferindo integridade da volatilidade.'}
+ else{decryptTitle.textContent='HORÁRIOS DISPONIVEIS';decryptText.textContent='Todos os dados foram executados.';addLine('>>> OPERAÇÃO CONCLUÍDA.',true);addLog('Simulação finalizada. Nenhum sistema foi acessado.');stop()}
 }
 function stop(){if(timer){clearInterval(timer);timer=null}}
 function start(){if(timer)return;if(progress>=100)reset();timer=setInterval(tick,1050);tick()}
